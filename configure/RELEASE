@@ -12,7 +12,7 @@
 SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
 -include $(TOP)/../configure/SUPPORT.$(EPICS_HOST_ARCH)
 
-ASYN=$(SUPPORT)/asyn/4-18
+ASYN=$(SUPPORT)/asyn/4-22
 IPAC=$(SUPPORT)/ipac/2-11
 SNCSEQ=$(SUPPORT)/seq/2-1-11
 
