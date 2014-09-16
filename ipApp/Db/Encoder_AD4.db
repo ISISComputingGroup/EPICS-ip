@@ -16,7 +16,7 @@ record(sseq, "$(P)AD4enc$(N):Init") {
 record(ai, "$(P)AD4enc$(N):count") {
   field(DESC, "Encoder Counts")
   field(PREC, "0")
-  field(EGU, "cnt")
+  field(EGU, "count")
 }
 
 record(ai, "$(P)AD4enc$(N):read") {
@@ -24,7 +24,7 @@ record(ai, "$(P)AD4enc$(N):read") {
   field(DTYP, "stream")
   field(INP, "@Encoder_AD4.proto readCnts $(PORT)")
   field(PREC, "0")
-  field(EGU, "cnt")
+  field(EGU, "count")
   field(FLNK, "$(P)AD4enc$(N):countCalc")
 }
 

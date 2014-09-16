@@ -20,7 +20,7 @@ record(ai,"$(P)$(GAUGE):PRES") {
 	field(SCAN,"2 second")
 	field(INP,"@asyn($(PORT) $(ADDR))GET_PRESSURE")
 	field(PREC,"3")
-	field(EGU,"Torr")
+	field(EGU,"torr")
         field(FLNK,"$(P)$(GAUGE):STATUS PP MS")
 }
 record(bi,"$(P)$(GAUGE):STATUS") {

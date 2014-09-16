@@ -3,14 +3,14 @@ grecord(ai,"$(P)DMM:thermistor1") {
 	field(FLNK,"$(P)DMM:T1.PROC  PP MS")
 	field(INP,"#L$(L) A$(A) @2")
 	field(PREC,"5")
-	field(EGU,"Ohms")
+	field(EGU,"ohm")
 }
 grecord(ai,"$(P)DMM:thermistor2") {
 	field(DTYP,"KeithleyDMM199")
 	field(FLNK,"$(P)DMM:T2.PROC  PP MS")
 	field(INP,"#L$(L) A$(A) @2")
 	field(PREC,"5")
-	field(EGU,"Ohms")
+	field(EGU,"ohm")
 }
 grecord(bo,"$(P)DMM:busy") {
 	field(DTYP,"Soft Channel")
