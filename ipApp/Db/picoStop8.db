@@ -1,4 +1,4 @@
-record(dfanout,"$(P)picoStopAll") {
+grecord(dfanout,"$(P)picoStopAll") {
 	field(VAL,"1")
 	field(OUTA,"$(P)$(S):$(D1):pM$(M1)_stop.PROC PP MS")
 	field(OUTB,"$(P)$(S):$(D2):pM$(M2)_stop.PROC PP MS")
