@@ -245,8 +245,8 @@ ss mode_change {
             pvPut(model);
             channels = atoi(macValueGet("channels"));
             pvPut(channels);
-            if (strcmp(model, "2000") == 0) {
-               strcpy(close_format, "rout:clos (@%d)");
+            if (strcmp(model, "2000") == 0 || strcmp(model, "2001") == 0) {
+               strcpy(close_format, ":rout:clos (@%d)");
             } else {
                strcpy(close_format, "rout:clos (@1%2.2d)");
             }

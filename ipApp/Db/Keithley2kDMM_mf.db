@@ -126,15 +126,16 @@ grecord(calc,"$(P)$(Dmm)Dmm_raw") {
 	field(DESC,"Dmm raw desc")
 	field(FLNK,"$(P)$(Dmm)Dmm_calc  PP MS")
 	field(CALC,"A*1.0")
-	field(INPA,"$(P)$(Dmm)dmm_get_str.VAL  NPP NMS")
+	field(INPA,"$(P)$(Dmm)dmm_get_val  CP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Dmm_calc") {
-	field(DESC,"Dmm Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Dmm_raw.VAL  NPP NMS")
-	field(PREC,"4")
+
+record(scalcout, "$(P)$(Dmm)dmm_get_val") {
+    field(DESC,"Get value from string")
+    field(INAA,"$(P)$(Dmm)dmm_get_str  CP NMS")
+    field(CALC, "SSCANF(AA, '%f')")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch22_raw") {
 	field(DESC,"Ch22 desc")
 	field(FLNK,"$(P)$(Dmm)Ch22_calc  PP MS")
