@@ -316,7 +316,7 @@ ss read_meter {
             efClear(read_complete_mon);
             pvPut(do_init);
             if (strcmp(model, "2001") == 0) {
-                pvPut(format_init);
+            pvPut(format_init);
             }
         } state wait_read
     }
@@ -369,10 +369,11 @@ ss read_meter {
             /* This logic adds a delay between the ch_clos and the
              * dmm_read if the function is AC volts, to work around bug in
              * Keithley 2000. */
-            if (mode == 1)
+            if (mode == 1 || strcmp(model, "2001") == 0) {
                 pvPut(dmm_delay_read);
-            else
+            } else {
                 pvPut(dmm_read);
+            }
         } state multi_read_response
 
         when((single_multi != 0) && (ch_on_off[scan_chan] != 0)) {

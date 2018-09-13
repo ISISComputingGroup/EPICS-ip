@@ -307,135 +307,135 @@ grecord(calcout,"$(P)$(Dmm)Ch11_calc") {
 	field(INPA,"$(P)$(Dmm)Ch11_raw.VAL  NPP NMS")
 	field(PREC,"4")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch10_raw") {
 	field(DESC,"Ch10 desc")
-	field(FLNK,"$(P)$(Dmm)Ch10_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch10_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch10_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch10_units") {
 	field(DESC,"Ch10 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch10_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
+
 grecord(calc,"$(P)$(Dmm)Ch9_raw") {
 	field(DESC,"Ch9 desc")
-	field(FLNK,"$(P)$(Dmm)Ch9_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch9_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch9_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch9_units") {
 	field(DESC,"Ch9 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch9_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch8_raw") {
 	field(DESC,"Ch8 desc")
-	field(FLNK,"$(P)$(Dmm)Ch8_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch8_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch8_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch8_units") {
 	field(DESC,"Ch8 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch8_raw.VAL  NPP MS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch7_raw") {
 	field(DESC,"Ch7 desc")
-	field(FLNK,"$(P)$(Dmm)Ch7_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch7_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch7_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch7_units") {
 	field(DESC,"Ch7 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch7_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch6_raw") {
 	field(DESC,"Ch6 desc")
-	field(FLNK,"$(P)$(Dmm)Ch6_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch6_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch6_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch6_units") {
 	field(DESC,"Ch6 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch6_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch5_raw") {
 	field(DESC,"Ch5 desc")
-	field(FLNK,"$(P)$(Dmm)Ch5_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch5_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch5_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch5_units") {
 	field(DESC,"Ch5 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch5_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch4_raw") {
 	field(DESC,"Ch4 desc")
-	field(FLNK,"$(P)$(Dmm)Ch4_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch4_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch4_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch4_units") {
 	field(DESC,"Ch4 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch4_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch3_raw") {
 	field(DESC,"Ch3 desc")
-	field(FLNK,"$(P)$(Dmm)Ch3_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch3_units  PP MS")
 	field(CALC,"A*1.0")
-	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  NPP NMS")
+	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch3_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch3_units") {
 	field(DESC,"Ch3 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch3_raw.VAL  PP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch2_raw") {
 	field(DESC,"Ch2 desc")
-	field(FLNK,"$(P)$(Dmm)Ch2_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch2_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch2_calc") {
+
+grecord(stringin,"$(P)$(Dmm)Ch2_units") {
 	field(DESC,"Ch2 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch2_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
+
 grecord(calc,"$(P)$(Dmm)Ch1_raw") {
 	field(DESC,"Ch1 desc")
-	field(FLNK,"$(P)$(Dmm)Ch1_calc  PP MS")
+	field(FLNK,"$(P)$(Dmm)Ch1_units  PP MS")
 	field(CALC,"A*1.0")
 	field(INPA,"$(P)$(Dmm)dmm_get_val.VAL  PP NMS")
 	field(PREC,"4")
 }
-grecord(calcout,"$(P)$(Dmm)Ch1_calc") {
+grecord(stringin,"$(P)$(Dmm)Ch1_units") {
 	field(DESC,"Ch1 Units")
-	field(CALC,"A")
-	field(INPA,"$(P)$(Dmm)Ch1_raw.VAL  NPP NMS")
-	field(PREC,"4")
+	field(INP,"$(P)$(Dmm)dmm_get_units.SVAL  PP NMS")
 }
 grecord(mbbo,"$(P)$(Dmm)ch_mode_sel") {
 	field(ZRST,"V DC")
@@ -454,6 +454,7 @@ grecord(mbbo,"$(P)$(Dmm)ch_mode_sel") {
 	field(TTST,"A DC")
 	field(FTST,"A AC")
 }
+
 grecord(mbbo,"$(P)$(Dmm)ch1_mode_sel") {
 	field(ZRST,"V DC")
 	field(ONST,"V AC")
@@ -468,9 +469,8 @@ grecord(mbbo,"$(P)$(Dmm)ch1_mode_sel") {
 	field(TEST,"TEMP R")
 	field(ELST,"TEMP S")
 	field(TVST,"TEMP B")
-
-
 }
+
 grecord(mbbo,"$(P)$(Dmm)ch2_mode_sel") {
 	field(ZRST,"V DC")
 	field(ONST,"V AC")
@@ -915,7 +915,6 @@ grecord(stringout,"$(P)$(Dmm)general_input") {
 grecord(stringout,"$(P)$(Dmm)ch_close") {
 	field(DTYP,"asyn so stringParm")
     field(OUT,"@asyn($(PORT))TERM=0a")
-    field(TPRO, "1")
 }
 grecord(stringout,"$(P)$(Dmm)conf_dcv") {
 	field(DTYP,"asyn so stringParm")
