@@ -259,7 +259,6 @@ ss mode_change {
             
                 mode = ch_mode[i];
 
-
                 sprintf(ch_units, "%s", unit_strings[mode]);
                 sprintf(pvname, "%s%sch%d_units.VAL", P, Dmm, i+1);
                 pvAssign(ch_units, pvname);
