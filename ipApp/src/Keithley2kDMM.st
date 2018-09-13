@@ -39,6 +39,7 @@ option +r;
 #define MAX_CHANNELS 22
 #define NUM_FRONT_MODES 15
 #define NUM_REAR_MODES 8
+#define MAX_LENGTH_OF_PVNAME 80
 %% #include "stdlib.h"
 %% #include "string.h"
 
@@ -210,7 +211,7 @@ string ch_units;  assign ch_units to "";
 char *unit_strings[NUM_FRONT_MODES];
 char *P;
 char *Dmm;
-string pvname;
+char pvname[MAX_LENGTH_OF_PVNAME];
 string close_format;
 int mode;
 int chan;
@@ -241,33 +242,24 @@ ss mode_change {
             
             P = macValueGet("P");
             Dmm = macValueGet("Dmm");
-            strcpy(model, macValueGet("model"));
+            strncpy(model, macValueGet("model"),sizeof(model));
             pvPut(model);
             channels = atoi(macValueGet("channels"));
             pvPut(channels);
             if (strcmp(model, "2000") == 0 || strcmp(model, "2001") == 0) {
-               strcpy(close_format, ":rout:clos (@%d)");
+               strncpy(close_format, "rout:clos (@%d)",sizeof(close_format));
             } else {
-               strcpy(close_format, "rout:clos (@1%2.2d)");
+               strncpy(close_format, "rout:clos (@1%2.2d)",sizeof(close_format));
             }
         } state monitor_mode_changes
     }
     state monitor_mode_changes {
         when(efTestAndClear(ch_mode_mon)) {
             for (i=0; i<channels; i++) {
-                /* Note: We have detected that one of the channel modes has
-                   changed.  For now we update all the channel labels.
-                   Although inefficient, it is done infrequently and the lack
-                   of string arrays in SNC makes any other approach a real
-                   mess. 
-                */
+            
                 mode = ch_mode[i];
-                /* Channels 21 and 22 on the model 2700 can only do DC and AC current, 
-                   and these are the first two choices, different from all other channels
-                */
-                if ((strcmp(model, "2700") == 0) && (i > 19)) {
-                    mode = mode + 13;
-                }
+
+
                 sprintf(ch_units, "%s", unit_strings[mode]);
                 sprintf(pvname, "%s%sch%d_units.VAL", P, Dmm, i+1);
                 pvAssign(ch_units, pvname);

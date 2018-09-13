@@ -18,7 +18,7 @@ grecord(bo,"$(P)$(Dmm)done_read") {
 	field(ONAM,"READ")
 }
 grecord(bo,"$(P)$(Dmm)scanner") {
-        field(VAL, "1")
+    field(VAL, "1")
 	field(OUT,"$(P)$(Dmm)done_read.VAL  PP MS")
 }
 grecord(bo,"$(P)$(Dmm)onesh_cont") {
@@ -868,9 +868,9 @@ grecord(stringin,"$(P)$(Dmm)ch22_units") {
 	field(VAL,"A DC")
 }
 grecord(seq,"$(P)$(Dmm)dmm_delay_read") {
-        field(DLY1, "0.1")
-        field(DOL1,"1")
-        field(LNK1,"$(P)$(Dmm)dmm_read.PROC  PP MS")
+    field(DLY1, "0.1")
+    field(DOL1,"1")
+    field(LNK1,"$(P)$(Dmm)dmm_read.PROC  PP MS")
 }
 grecord(stringout,"$(P)$(Dmm)dmm_read") {
 	field(DTYP,"asyn so stringParm")
@@ -884,7 +884,7 @@ grecord(stringin,"$(P)$(Dmm)dmm_get_str") {
 	field(FLNK,"$(P)$(Dmm)read_finished.VAL  PP MS")
 }
 grecord(bo,"$(P)$(Dmm)read_finished") {
-        field(VAL, "1")
+    field(VAL, "1")
 	field(OUT,"$(P)$(Dmm)read_complete.VAL  PP MS")
 }
 grecord(bo,"$(P)$(Dmm)read_complete") {
@@ -899,7 +899,8 @@ grecord(stringout,"$(P)$(Dmm)general_input") {
 }
 grecord(stringout,"$(P)$(Dmm)ch_close") {
 	field(DTYP,"asyn so stringParm")
-	field(OUT,"@asyn($(PORT))TERM=0a")
+    field(OUT,"@asyn($(PORT))TERM=0a")
+    field(TPRO, "1")
 }
 grecord(stringout,"$(P)$(Dmm)conf_dcv") {
 	field(DTYP,"asyn so stringParm")
