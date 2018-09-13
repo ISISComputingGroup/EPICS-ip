@@ -13,6 +13,11 @@ grecord(stringout,"$(P)$(Dmm)init_string") {
 	field(VAL,"*rst")
 	field(OUT,"@asyn($(PORT))TERM=0a")
 }
+grecord(stringout,"$(P)$(Dmm)init_format") {
+	field(DTYP,"asyn so stringParm")
+	field(VAL,":form:elem read,unit")
+	field(OUT,"@asyn($(PORT))TERM=0a")
+}
 grecord(bo,"$(P)$(Dmm)done_read") {
 	field(ZNAM,"DONE")
 	field(ONAM,"READ")
@@ -122,18 +127,28 @@ grecord(bo,"$(P)$(Dmm)Ch1_on_off") {
 	field(ZNAM,"ON")
 	field(ONAM,"OFF")
 }
-grecord(calc,"$(P)$(Dmm)Dmm_raw") {
-	field(DESC,"Dmm raw desc")
-	field(FLNK,"$(P)$(Dmm)Dmm_calc  PP MS")
-	field(CALC,"A*1.0")
-	field(INPA,"$(P)$(Dmm)dmm_get_val  PP NMS")
+grecord(ai,"$(P)$(Dmm)Dmm_raw") {
+	field(DESC,"Dmm raw value")
+	field(FLNK,"$(P)$(Dmm)Dmm_units PP MS")
+	field(INP,"$(P)$(Dmm)dmm_get_val.VAL CP NMS")
 	field(PREC,"4")
+}
+
+grecord(stringin,"$(P)$(Dmm)Dmm_units") {
+    field(DESC,"Dmm Units")
+    field(INP, "$(P)$(Dmm)dmm_get_units.SVAL PP NMS")
 }
 
 record(scalcout, "$(P)$(Dmm)dmm_get_val") {
     field(DESC,"Get value from string")
-    field(INAA,"$(P)$(Dmm)dmm_get_str  CP NMS")
+    field(INAA,"$(P)$(Dmm)dmm_get_str CP NMS")
     field(CALC, "SSCANF(AA, '%f')")
+}
+
+record(scalcout, "$(P)$(Dmm)dmm_get_units") {
+    field(DESC,"Get unit from string")
+    field(INAA,"$(P)$(Dmm)dmm_get_str CP NMS")
+    field(CALC, "SSCANF(AA, '%*f%s')")
 }
 
 grecord(calc,"$(P)$(Dmm)Ch22_raw") {

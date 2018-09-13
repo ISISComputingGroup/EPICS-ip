@@ -39,7 +39,7 @@ option +r;
 #define MAX_CHANNELS 22
 #define NUM_FRONT_MODES 15
 #define NUM_REAR_MODES 8
-#define MAX_LENGTH_OF_PVNAME 80
+#define MAX_LENGTH_OF_PVNAME 61
 %% #include "stdlib.h"
 %% #include "string.h"
 
@@ -202,7 +202,10 @@ sync    init_dmm init_dmm_mon;
 int do_init;
 assign do_init to "{P}{Dmm}init_string.PROC";
 
-string ch_close;  assign  ch_close to "{P}{Dmm}ch_close.VAL";
+int format_init;
+assign format_init to "{P}{Dmm}init_format.PROC";
+
+string ch_close; assign  ch_close to "{P}{Dmm}ch_close.VAL";
 string model; assign model to "{P}{Dmm}model.VAL";
 int channels; assign channels to "{P}{Dmm}channels.VAL";
 string dmm_units; assign dmm_units to "{P}{Dmm}units.VAL";
@@ -312,6 +315,9 @@ ss read_meter {
             previous_chan = -1;
             efClear(read_complete_mon);
             pvPut(do_init);
+            if (strcmp(model, "2001") == 0) {
+                pvPut(format_init);
+            }
         } state wait_read
     }
     state wait_read {
