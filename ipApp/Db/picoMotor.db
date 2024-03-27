@@ -145,9 +145,9 @@ grecord(transform,"$(P)$(S):$(D):pM$(M)_eta") {
 grecord(transform,"$(P)$(S):$(D):pM$(M)_lim") {
 	field(CLCD,"A>=C?1:0")
 	field(CLCE,"A<=B?1:0")
-	field(INPA,"$(P)$(S):$(D):pM$(M)_pos.VAL  PP MS")
-	field(INPB,"$(P)$(S):$(D):pM$(M)_pos.DRVL  PP MS")
-	field(INPC,"$(P)$(S):$(D):pM$(M)_pos.DRVH  PP MS")
+	field(INPA,"$(P)$(S):$(D):pM$(M)_pos.VAL  CP MS")
+	field(INPB,"$(P)$(S):$(D):pM$(M)_pos.DRVL CP MS")
+	field(INPC,"$(P)$(S):$(D):pM$(M)_pos.DRVH  CP MS")
 	field(OUTD,"$(P)$(S):$(D):pM$(M)_hi.VAL  PP MS")
 	field(OUTE,"$(P)$(S):$(D):pM$(M)_lo.VAL  PP MS")
 }
@@ -157,7 +157,7 @@ grecord(transform,"$(P)$(S):$(D):pM$(M)_rel") {
 	field(CLCD,"(A>B)?(A-B):(A<B)?(-1*(B-A)):0")
 	field(CLCE,"NINT((1/C)*D)")
 	field(CLCF,"A")
-	field(CLCH,"G=0?E:G=1?((-1)*E)")
+	field(CLCH,"G=0?E:G=1?((-1)*E):E")
 	field(INPA,"0")
 	field(INPB,"$(P)$(S):$(D):pM$(M)_prev.VAL  NPP MS")
 	field(INPC,"$(P)$(S):$(D):pM$(M)_res.VAL  NPP MS")
