@@ -1,6 +1,22 @@
+# SUPPORT=/home/oxygen/MOONEY/epics/synAppsSVN/support
+SUPPORT=/APSshare/epics/synApps_6_1/support-v7
+
+ASYN=$(SUPPORT)/asyn-R4-36
+IPAC=$(SUPPORT)/ipac-2-15
+SNCSEQ=$(SUPPORT)/seq-2-2-6
+
+EPICS_BASE=/APSshare/epics/base-7.0.3
+
+# These lines allow developers to override these RELEASE settings
+# without having to modify this file directly.
+-include $(TOP)/../RELEASE.local
+-include $(TOP)/../RELEASE.$(EPICS_HOST_ARCH).local
+-include $(TOP)/configure/RELEASE.local
+
 # Local dependencies
 ASYN=$(SUPPORT)/asyn/master
 SNCSEQ=$(SUPPORT)/seq/master
+IPAC=$(SUPPORT)/ipac/master
 
 # optional extra local definitions here
 -include $(TOP)/configure/RELEASE.private
