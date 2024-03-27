@@ -3,11 +3,11 @@
 # http://www.controlanything.com/Relay/Device/R23DPDTCNRS
 
 ############  SVN Repository information  #############
-# $Date: 2011-09-28 16:47:03 -0500 (Wed, 28 Sep 2011) $
-# $Author: kpetersn $
-# $Revision: 13794 $
-# $HeadURL: https://subversion.xor.aps.anl.gov/synApps/ip/tags/R2-13/ipApp/Db/NCD_R2X.db $
-# $Id: NCD_R2X.db 13794 2011-09-28 21:47:03Z kpetersn $
+# $Date$
+# $Author$
+# $Revision$
+# $HeadURL$
+# $Id$
 #######################################################
 
 record(bo, "$(P)$(R)r1ctrl")
